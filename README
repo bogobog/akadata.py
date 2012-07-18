@@ -1,0 +1,32 @@
+akadata.py implements EdgeScape support in Python
+Created from AkaData.pm by Ken Reeves ( joodahr@gmail.com )
+
+Requires Python 2.6
+
+Sample Usage:
+    
+Command Line: 
+$ ./akadata.py -e facilitator.myhost.net -p 2001 123.123.123.123
+city=BEIJING
+domain=baidu.com
+region_code=BJ
+network=chinaunicom
+company=China_Unicom_Beijing_province_network
+long=116.41
+bw=1
+throughput=low
+country_code=CN
+lat=39.90
+timezone=GMT+8
+continent=AS
+asnum=4808
+
+Module:
+from akadata import AkaData
+
+edge_host = AkaData( host = facilitator.myhost.net, port = 2001 )
+
+result = edge_host.ipLookup( '123.123.123.123' )
+    
+The result is a dictionary of all returned fields.
+
